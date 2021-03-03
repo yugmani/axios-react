@@ -1,16 +1,28 @@
-import logo from "./logo.svg";
-import "./App.css";
 import DataFetching from "./components/DataFetching";
+import PhotoFetching from "./components/PhotoFetching";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+    <Container>
+      <Header>Fetching Data in React</Header>
       <DataFetching />
-    </div>
+      <PhotoFetching />
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: navy;
+  color: white;
+`;
+
+const Header = styled.h1`
+  text-decoration: underline;
+`;
